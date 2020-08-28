@@ -8,3 +8,17 @@
 
 import Foundation
 
+class Person: Codable {
+    
+    var fullName: String
+    
+    init(fullName: String) {
+        self.fullName = fullName
+    }
+} // End of class
+
+extension Person: Equatable {
+    static func == (lhs: Person, rhs: Person) -> Bool {
+        return lhs.fullName == rhs.fullName
+    }
+} // End of extension

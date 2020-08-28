@@ -13,6 +13,8 @@
 		4B30002524F958CA007B48F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B30002424F958CA007B48F9 /* Assets.xcassets */; };
 		4B30002824F958CA007B48F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B30002624F958CA007B48F9 /* LaunchScreen.storyboard */; };
 		4B30003624F95B4A007B48F9 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B30003524F95B4A007B48F9 /* Person.swift */; };
+		4B30003824F95BFB007B48F9 /* PersonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B30003724F95BFB007B48F9 /* PersonController.swift */; };
+		4B30003A24F95FE3007B48F9 /* PeopleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B30003924F95FE3007B48F9 /* PeopleTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		4B30002724F958CA007B48F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B30002924F958CA007B48F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B30003524F95B4A007B48F9 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		4B30003724F95BFB007B48F9 /* PersonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonController.swift; sourceTree = "<group>"; };
+		4B30003924F95FE3007B48F9 /* PeopleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,7 @@
 		4B30003324F95917007B48F9 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4B30003924F95FE3007B48F9 /* PeopleTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -111,6 +116,7 @@
 		4B30003424F9591F007B48F9 /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4B30003724F95BFB007B48F9 /* PersonController.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -186,9 +192,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B30003824F95BFB007B48F9 /* PersonController.swift in Sources */,
 				4B30003624F95B4A007B48F9 /* Person.swift in Sources */,
 				4B30001C24F958C9007B48F9 /* AppDelegate.swift in Sources */,
 				4B30001E24F958C9007B48F9 /* SceneDelegate.swift in Sources */,
+				4B30003A24F95FE3007B48F9 /* PeopleTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
