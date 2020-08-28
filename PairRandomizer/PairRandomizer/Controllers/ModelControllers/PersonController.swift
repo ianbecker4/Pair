@@ -16,23 +16,25 @@ class PersonController {
     /// Source of Truth
     var people: [Person] = []
     
-    //Initialize loadfromstore
+    init() {
+        loadFromPersistentStore()
+    }
     
     // MARK: - CRUD Functions (Create and Delete)
     func createPersonWith(fullName: String) {
         let newPerson = Person(fullName: fullName)
         people.append(newPerson)
-        // SAVE
+        saveToPersistentStore()
     }
     
     func deletePerson(person: Person) {
         guard let index = people.firstIndex(of: person) else {return}
         people.remove(at: index)
-        // SAVE
+        saveToPersistentStore()
     }
     
     // MARK: - Persistence
-    func fileURL() -> URL {
+    private func fileURL() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let documentDirectory = paths[0]
         let filename = "pairRandomizer.json"
@@ -40,7 +42,7 @@ class PersonController {
         return fullURL
     }
     
-    func saveToPersistentStore() {
+    private func saveToPersistentStore() {
         
         do {
             let data = try JSONEncoder().encode(people)
@@ -53,7 +55,7 @@ class PersonController {
         }
     }
     
-    func loadFromPersistentStore() {
+    private func loadFromPersistentStore() {
         do {
             let data = try Data(contentsOf: fileURL())
             let people = try JSONDecoder().decode([Person].self, from: data)
@@ -63,4 +65,4 @@ class PersonController {
             print("\(#file)\(#line)")
         }
     }
-}
+} // End of class 
